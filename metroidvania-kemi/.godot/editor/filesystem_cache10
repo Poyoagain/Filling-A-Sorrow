@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1768589045
-icon.svg::CompressedTexture2D::2661126032446456542::1768586360::1768586370::1::::<><><>0<>0<>00dbc53ec4e0ee156a6653d079ce3575<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-character.gd::GDScript::1781534194551171046::1768588576::0::1::::<>CharacterBody2D<><>0<>0<><>::
-character.tscn::PackedScene::8828960563313483549::1768589343::0::1::::<><><>0<>0<><>::uid://0m8uwy4eg5r3::::res://character.gd<>uid://bd6cmev6gfgty::::res://icon.svg
-tile_map_layer.tscn::PackedScene::4464424073574370661::1768589345::0::1::::<><><>0<>0<><>::
+::res://::1768848068
+black.png::CompressedTexture2D::2039317473460603421::1768847946::1768848071::1::::<><><>0<>0<>3ebab416a53c6b67521f60eb8f5e4571<>res://.godot/imported/black.png-19a8df0b1a4edb74ea2eecb66d46d03d.ctex::
+character.gd::GDScript/GDScript::1781534194551171046::1768588576::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character.tscn::PackedScene::8828960563313483549::1768847479::0::1::::<><><>0<>0<><>::uid://0m8uwy4eg5r3::::res://character.gd<>uid://bd6cmev6gfgty::::res://icon.svg
+icon.svg::CompressedTexture2D/CompressedTexture2D::2661126032446456542::1768586360::1768586370::1::::<><><>0<>0<>00dbc53ec4e0ee156a6653d079ce3575<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+map.tscn::PackedScene::4464424073574370661::1768592317::0::1::::<><><>0<>0<><>::
