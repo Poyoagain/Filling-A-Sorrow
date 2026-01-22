@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dx12xqjnqmqev"]
 
-[ext_resource type="Script" uid="uid://0m8uwy4eg5r3" path="res://character.gd" id="1_glpr6"]
-[ext_resource type="Texture2D" uid="uid://bd6cmev6gfgty" path="res://icon.svg" id="2_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://bd6cmev6gfgty" path="res://icon.svg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://d4ghumy536sss" path="res://script/player/player.gd" id="1_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjt0s"]
 radius = 50.0
@@ -10,11 +10,11 @@ height = 102.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5vi"]
 size = Vector2(120, 120)
 
-[node name="Character" type="CharacterBody2D"]
-script = ExtResource("1_glpr6")
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
 
 [node name="*" type="Sprite2D" parent="."]
-texture = ExtResource("2_pjt0s")
+texture = ExtResource("1_4flbx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
