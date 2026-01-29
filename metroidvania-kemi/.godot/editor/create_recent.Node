@@ -1,0 +1,5 @@
+CollisionShape2D
+Area2D
+TextureRect
+TileMapLayer
+Sprite2D
