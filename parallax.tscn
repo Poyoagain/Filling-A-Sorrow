@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dc3f6a5ytbdhn"]
+
+[ext_resource type="Texture2D" uid="uid://c37txa1rwkp20" path="res://KEMIPRETOBRANCOEMORTE/SOMBRA BRANCA/cenarios/29_Sem_Titulo_20260323134138.webp" id="1_07rix"]
+
+[node name="Node2D" type="Node2D" unique_id=1925087930]
+metadata/_edit_vertical_guides_ = [4273.0, 4273.0, 4278.0]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1873623952]
+scroll_scale = Vector2(0.3, 1)
+repeat_size = Vector2(4278, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1886741991]
+position = Vector2(1736, 445)
+scale = Vector2(5, 5)
+texture = ExtResource("1_07rix")

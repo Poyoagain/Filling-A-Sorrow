@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://06hapiqbgql1"]
+
+[ext_resource type="Script" uid="uid://d2xn8oxs0jiw0" path="res://voltar.gd" id="1_ilafw"]
+[ext_resource type="AudioStream" uid="uid://3ugj0qn8me6h" path="res://music/Thanks You For The Sorrow, Freedom Came(CREDITO EDITION).mp3" id="2_7flbs"]
+
+[node name="Creditos" type="Node2D" unique_id=1716277577]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1057045043]
+offset_right = 1920.0
+offset_bottom = 1090.0
+color = Color(0, 0, 0, 1)
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1833418968]
+offset_left = 850.0
+offset_top = 250.0
+offset_right = 1069.0
+offset_bottom = 639.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer" unique_id=473069332]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="BoxContainer/VBoxContainer" unique_id=1217322371]
+layout_mode = 2
+text = "Créditos"
+horizontal_alignment = 1
+
+[node name="HSeparator6" type="HSeparator" parent="BoxContainer/VBoxContainer" unique_id=1763648603]
+layout_mode = 2
+
+[node name="Desenvolvedora" type="Label" parent="BoxContainer/VBoxContainer" unique_id=683973572]
+layout_mode = 2
+text = "Desenvovedora:
+Stellum Project"
+horizontal_alignment = 1
+
+[node name="HSeparator7" type="HSeparator" parent="BoxContainer/VBoxContainer" unique_id=1520382532]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/VBoxContainer" unique_id=2050346053]
+layout_mode = 2
+text = "Co-Desenvolvedora:
+DLUX Production"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BoxContainer/VBoxContainer" unique_id=40540649]
+layout_mode = 2
+
+[node name="Direcao geral" type="Label" parent="BoxContainer/VBoxContainer" unique_id=207367944]
+layout_mode = 2
+text = "Direção e Organização:
+Ariel Dias
+Lara Cristal"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="BoxContainer/VBoxContainer" unique_id=162788458]
+layout_mode = 2
+
+[node name="Programadores" type="Label" parent="BoxContainer/VBoxContainer" unique_id=1778445335]
+layout_mode = 2
+text = "Programadores:
+Yago Antony
+João Guilherme"
+horizontal_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="BoxContainer/VBoxContainer" unique_id=608945454]
+layout_mode = 2
+
+[node name="Direcao de Arte" type="Label" parent="BoxContainer/VBoxContainer" unique_id=987430238]
+layout_mode = 2
+text = "Direção Grafica:
+Isaac Costa"
+horizontal_alignment = 1
+
+[node name="HSeparator5" type="HSeparator" parent="BoxContainer/VBoxContainer" unique_id=547571080]
+layout_mode = 2
+
+[node name="Direcao Sonora" type="Label" parent="BoxContainer/VBoxContainer" unique_id=516419253]
+layout_mode = 2
+text = "Direção Sonoro / OST:
+Ariel Dias"
+horizontal_alignment = 1
+
+[node name="Voltar" type="Button" parent="." unique_id=469570331]
+offset_left = 930.0
+offset_top = 860.0
+offset_right = 985.0
+offset_bottom = 891.0
+text = "Voltar"
+script = ExtResource("1_ilafw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1550162663]
+stream = ExtResource("2_7flbs")
+autoplay = true
+
+[connection signal="pressed" from="Voltar" to="Voltar" method="_on_pressed"]

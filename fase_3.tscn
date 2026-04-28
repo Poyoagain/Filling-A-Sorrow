@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cxkq7k3w3l6xe"]
+
+[ext_resource type="Texture2D" uid="uid://drpqf62umflsu" path="res://CONCEPTV1AREA1Visaac.webp" id="2_6tnni"]
+[ext_resource type="PackedScene" uid="uid://dx12xqjnqmqev" path="res://player.tscn" id="2_y4i80"]
+[ext_resource type="Texture2D" uid="uid://4b4i4sby0mhx" path="res://black.png" id="3_6tnni"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bemxe"]
+texture = ExtResource("3_6tnni")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_8dtid"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_bemxe")
+
+[node name="fase_3" type="Node2D" unique_id=495678435]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=921806079]
+modulate = Color(1, 1, 1, 0.5058824)
+position = Vector2(67701, 35878)
+scale = Vector2(100, 100)
+texture = ExtResource("2_6tnni")
+
+[node name="player" parent="." unique_id=1173548511 instance=ExtResource("2_y4i80")]
+
+[node name="Colision" type="TileMapLayer" parent="." unique_id=933782960]
+position = Vector2(67701, 35878)
+tile_set = SubResource("TileSet_8dtid")

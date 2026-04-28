@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b601iof2nac3a"]
+
+[ext_resource type="AudioStream" uid="uid://b3wltc4qp037j" path="res://music/menu filling a sorrow.mp3" id="1_d2dya"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_d2dya")
+autoplay = true

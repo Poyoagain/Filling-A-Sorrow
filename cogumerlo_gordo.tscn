@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://ruvp2i6h2dxs"]
+
+[ext_resource type="Script" uid="uid://dymnm6bmx3ajp" path="res://cogumerlo_gordo.gd" id="1_qftun"]
+[ext_resource type="Texture2D" uid="uid://due6xmvsrp4rb" path="res://COGUMELOGORDORTUNADOATAQUE/cogumelogordorupadoataque1.png" id="2_qftun"]
+[ext_resource type="Texture2D" uid="uid://b1bprqheo2bso" path="res://COGUMELOGORDORTUNADOATAQUE/cogumelogordorupadoataque2.png" id="3_76x0m"]
+[ext_resource type="Texture2D" uid="uid://ce8gl86htwfx2" path="res://COGUMELOGORDORTUNADOATAQUE/cogumelogordorupadoataque3.png" id="4_73nav"]
+[ext_resource type="Texture2D" uid="uid://b0j5h4vqx02tq" path="res://COGUMELOGORDORTUNADOATAQUE/cogumelogordorupadoataque4.png" id="5_8enaw"]
+[ext_resource type="Texture2D" uid="uid://cek526b0ruxnd" path="res://COGUMELOGORDORTUNADOATAQUE/cogumelogordorupadoataque5.png" id="6_ed4ww"]
+[ext_resource type="Texture2D" uid="uid://jy5bbpjsc8bo" path="res://COGUMELOGORDORTUNADOATAQUE/cogumelogordorupadoataque6.png" id="7_de8ow"]
+[ext_resource type="Texture2D" uid="uid://baxey7julwy8i" path="res://cogumelogordoupadomorte/cogumelogordorupadomorte2.webp" id="8_8enaw"]
+[ext_resource type="Texture2D" uid="uid://mj1apeh7sfkl" path="res://COGUMELOGORDORANDANDO/cogumelogordorupado1.png" id="8_huj7j"]
+[ext_resource type="Texture2D" uid="uid://bc67ak31ern6m" path="res://cogumelogordoupadomorte/cogumelogordorupadomorte3.webp" id="9_ed4ww"]
+[ext_resource type="Texture2D" uid="uid://d1duifrvh8pk8" path="res://COGUMELOGORDORANDANDO/cogumelogordorupado2.png" id="9_x5ms4"]
+[ext_resource type="Texture2D" uid="uid://sk3mg41iad2v" path="res://cogumelogordoupadomorte/cogumelogordorupadomorte4.webp" id="10_de8ow"]
+[ext_resource type="Texture2D" uid="uid://c7qutpc05rmwo" path="res://COGUMELOGORDORANDANDO/cogumelogordorupado3.png" id="10_jbsau"]
+[ext_resource type="Texture2D" uid="uid://bt5vi3mi74bk1" path="res://COGUMELOGORDORANDANDO/cogumelogordorupado4.png" id="11_wp650"]
+[ext_resource type="Texture2D" uid="uid://bygce8oqg72l1" path="res://COGUMELOGORDORANDANDO/cogumelogordorupado5.png" id="12_wrydr"]
+[ext_resource type="Texture2D" uid="uid://cw8hsy341b6lx" path="res://COGUMELOGORDORANDANDO/cogumelogordorupado6.png" id="13_88uom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8enaw"]
+atlas = ExtResource("8_8enaw")
+region = Rect2(0, 0, 1229, 691)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed4ww"]
+atlas = ExtResource("9_ed4ww")
+region = Rect2(0, 0, 1229, 691)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8ow"]
+atlas = ExtResource("10_de8ow")
+region = Rect2(0, 0, 1229, 691)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwn6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qftun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_76x0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73nav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8enaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ed4ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_de8ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8enaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed4ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de8ow")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_huj7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x5ms4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jbsau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wp650")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wrydr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_88uom")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfs2i"]
+radius = 70.0
+height = 300.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qftun"]
+radius = 200.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76x0m"]
+size = Vector2(400, 70)
+
+[node name="cogumerlo_gordo" type="CharacterBody2D" unique_id=971866959]
+scale = Vector2(2, 2)
+script = ExtResource("1_qftun")
+
+[node name="SpriteContainer" type="Node2D" parent="." unique_id=953275282]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpriteContainer" unique_id=1275054576]
+position = Vector2(283, 128)
+sprite_frames = SubResource("SpriteFrames_iwn6b")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=50663008]
+position = Vector2(8, 2)
+shape = SubResource("CapsuleShape2D_vfs2i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1830252022]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1283695710]
+position = Vector2(0.5000498, -1.9073486e-06)
+rotation = -1.5703715
+shape = SubResource("CircleShape2D_qftun")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=531111617]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1378827652]
+position = Vector2(-0.25, 0.25)
+shape = SubResource("RectangleShape2D_76x0m")
+
+[node name="Timer" type="Timer" parent="." unique_id=277364684]
+wait_time = 0.5
+one_shot = true

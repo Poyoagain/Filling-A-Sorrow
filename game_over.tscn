@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://7swkwcjuomkj"]
+
+[ext_resource type="Script" uid="uid://c8qmtilybpoif" path="res://reiniciar.gd" id="1_y26ei"]
+[ext_resource type="VideoStream" uid="uid://7nbfyw8124lc" path="res://Videos/lv_0_20260417153949 (1).ogv" id="1_yxx3c"]
+[ext_resource type="AudioStream" uid="uid://d3xlxl5ydvgmw" path="res://Audio/Projeto_novo.mp3" id="3_ccer4"]
+
+[node name="GameOver" type="Node2D" unique_id=1354605269]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1591092767]
+offset_right = 1930.0
+offset_bottom = 1100.0
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=530293471]
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("1_yxx3c")
+autoplay = true
+
+[node name="Reiniciar" type="Button" parent="." unique_id=1851687520]
+offset_left = 835.0
+offset_top = 700.0
+offset_right = 1085.0
+offset_bottom = 750.0
+text = "Reiniciar"
+script = ExtResource("1_y26ei")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1395200298]
+stream = ExtResource("3_ccer4")
+autoplay = true
+
+[connection signal="pressed" from="Reiniciar" to="Reiniciar" method="_on_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://2nuuosjcrygs"]
+
+[ext_resource type="Script" uid="uid://c56qkdmrfwrxr" path="res://chorao.gd" id="1_pqxe1"]
+[ext_resource type="Texture2D" uid="uid://d16g8whdmiw84" path="res://choraosprites/CHORÃOframe2.png" id="2_ctxq6"]
+[ext_resource type="Texture2D" uid="uid://b0xvwcn403rop" path="res://choraosprites/CHORÃOframe3.png" id="3_ehrhr"]
+[ext_resource type="Texture2D" uid="uid://cxor1yaommo1c" path="res://choraosprites/CHORÃOframe4.png" id="4_hudbp"]
+[ext_resource type="Texture2D" uid="uid://b3rrt45y13r1q" path="res://choraosprites/exp.png" id="5_r376o"]
+[ext_resource type="Texture2D" uid="uid://bvtqhec0vjm2u" path="res://choraosprites/CHORÃOframe1.png" id="6_ij8ap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wyob"]
+radius = 225.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr36a"]
+atlas = ExtResource("2_ctxq6")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpgae"]
+atlas = ExtResource("3_ehrhr")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22733"]
+atlas = ExtResource("4_hudbp")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqxe1"]
+atlas = ExtResource("5_r376o")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11xhk"]
+atlas = ExtResource("6_ij8ap")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wp5nf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xr36a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpgae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22733")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_pqxe1")
+}],
+"loop": false,
+"name": &"alert",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11xhk")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae143"]
+size = Vector2(1800, 800)
+
+[node name="Chorão" type="CharacterBody2D" unique_id=507859515]
+script = ExtResource("1_pqxe1")
+explosion_radius = 1800.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334924918]
+shape = SubResource("CircleShape2D_7wyob")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=371169191]
+sprite_frames = SubResource("SpriteFrames_wp5nf")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1253958993]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1228347084]
+position = Vector2(0, -150)
+shape = SubResource("RectangleShape2D_ae143")
+
+[node name="Timer" type="Timer" parent="." unique_id=1343966652]
+one_shot = true

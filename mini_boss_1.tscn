@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cn72cepqa23wq"]
+
+[ext_resource type="Texture2D" uid="uid://bgay1q8mgt4mr" path="res://61_Sem_Titulo_20260413203811.webp" id="1_iwpie"]
+[ext_resource type="Script" uid="uid://c51tqken23123" path="res://boss.gd" id="1_t23hs"]
+[ext_resource type="Texture2D" uid="uid://ctco3b6bomu2k" path="res://61_Sem_Titulo_20260413203914.webp" id="2_t23hs"]
+[ext_resource type="Texture2D" uid="uid://b0n1qban5jo3h" path="res://61_Sem_Titulo_20260413203952.webp" id="3_bfk1l"]
+[ext_resource type="Texture2D" uid="uid://cy78r68fkfs2n" path="res://61_Sem_Titulo_20260413204035.webp" id="4_enuxc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gf820"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iwpie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t23hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bfk1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_enuxc")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 24.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t23hs"]
+size = Vector2(700, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfk1l"]
+size = Vector2(550, 550)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_enuxc"]
+radius = 3000.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enuxc"]
+
+[node name="Boss" type="CharacterBody2D" unique_id=294321131]
+script = ExtResource("1_t23hs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=358886991]
+sprite_frames = SubResource("SpriteFrames_gf820")
+animation = &"fly"
+frame_progress = 0.22891763
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1751608732]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1059356301]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_t23hs")
+
+[node name="HitboxDano" type="Area2D" parent="." unique_id=102667814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxDano" unique_id=136120035]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_bfk1l")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1148130583]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1854601294]
+shape = SubResource("CircleShape2D_enuxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1010564049]
+shape = SubResource("RectangleShape2D_enuxc")
+disabled = true

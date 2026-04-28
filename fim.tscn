@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dkmf6isprakuk"]
+
+[ext_resource type="Script" uid="uid://d4lp3s4jlvt28" path="res://sair_fim.gd" id="1_714k2"]
+[ext_resource type="AudioStream" uid="uid://3ugj0qn8me6h" path="res://music/Thanks You For The Sorrow, Freedom Came(CREDITO EDITION).mp3" id="2_ay7l0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7h3ca"]
+
+[node name="Fim" type="Node2D" unique_id=1815241367]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=531047252]
+offset_right = 1925.0
+offset_bottom = 1200.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label2" type="Label" parent="." unique_id=1221702979]
+offset_top = 250.0
+offset_right = 1920.0
+offset_bottom = 750.0
+text = "Parabéns por sobreviver mais um dia do seu luto Kemi."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=92229132]
+offset_top = 400.0
+offset_right = 1920.0
+offset_bottom = 900.0
+text = "Obrigado Por Jogar 
+Filling A Sorrow "
+label_settings = SubResource("LabelSettings_7h3ca")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sair_Fim" type="Button" parent="." unique_id=1466191709]
+offset_left = 940.0
+offset_top = 860.0
+offset_right = 978.0
+offset_bottom = 891.0
+text = "Sair"
+script = ExtResource("1_714k2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=819341798]
+stream = ExtResource("2_ay7l0")
+autoplay = true
+
+[connection signal="pressed" from="Sair_Fim" to="Sair_Fim" method="_on_pressed"]
