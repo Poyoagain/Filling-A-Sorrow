@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3ugj0qn8me6h"
+path="res://.godot/imported/Thanks You For The Sorrow, Freedom Came(CREDITO EDITION).mp3-736c2358577f6ce0c59a40cc1c45abe6.mp3str"
+
+[deps]
+
+source_file="res://music/Thanks You For The Sorrow, Freedom Came(CREDITO EDITION).mp3"
+dest_files=["res://.godot/imported/Thanks You For The Sorrow, Freedom Came(CREDITO EDITION).mp3-736c2358577f6ce0c59a40cc1c45abe6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

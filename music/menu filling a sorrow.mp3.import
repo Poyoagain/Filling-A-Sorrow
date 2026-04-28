@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3wltc4qp037j"
+path="res://.godot/imported/menu filling a sorrow.mp3-605a0b971fb10e6bffdcabc7bd8a4b9e.mp3str"
+
+[deps]
+
+source_file="res://music/menu filling a sorrow.mp3"
+dest_files=["res://.godot/imported/menu filling a sorrow.mp3-605a0b971fb10e6bffdcabc7bd8a4b9e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btaxqwhbnpiwf"
+path="res://.godot/imported/OST 1.mp3-2b3eb6a33e7d49d274ee8fda9b65b863.mp3str"
+
+[deps]
+
+source_file="res://music/OST 1.mp3"
+dest_files=["res://.godot/imported/OST 1.mp3-2b3eb6a33e7d49d274ee8fda9b65b863.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
