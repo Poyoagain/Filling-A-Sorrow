@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://dupy74srg86s"]
+
+[ext_resource type="Script" uid="uid://bw34hq13ghjky" path="res://cogumelitos/cogumelitos.gd" id="1_sojgr"]
+[ext_resource type="Texture2D" uid="uid://dshvb362a3jod" path="res://cogumelitos/cogumelosminis1andando.webp" id="2_3d63p"]
+[ext_resource type="Texture2D" uid="uid://bc1imvxqm4edq" path="res://cogumelitos/cogumelosminis1parado.webp" id="3_slwn8"]
+[ext_resource type="Texture2D" uid="uid://c813rtfvxvtey" path="res://cogumelitos/cogumelosminis2andando.webp" id="4_2se3a"]
+[ext_resource type="Texture2D" uid="uid://hi14ar04pnyy" path="res://cogumelitos/cogumelosminis3andando.webp" id="5_jk05t"]
+[ext_resource type="Texture2D" uid="uid://dpy0hgumre34y" path="res://cogumelitos/cogumelosminis4andando.webp" id="6_y7w7k"]
+[ext_resource type="Texture2D" uid="uid://b31ocyegpu4eq" path="res://cogumelitos/cogumelosminis5andando.webp" id="7_1q67t"]
+[ext_resource type="Texture2D" uid="uid://bab861y3uxsja" path="res://cogumelitosmorte/cogumelosminis1morto.webp" id="8_5lg3o"]
+[ext_resource type="Texture2D" uid="uid://1o1aw1swcl6w" path="res://cogumelitosmorte/cogumelosminis2morto.webp" id="9_hbvf6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gix8p"]
+atlas = ExtResource("8_5lg3o")
+region = Rect2(0, 0, 1229, 691)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx7vr"]
+atlas = ExtResource("9_hbvf6")
+region = Rect2(0, 0, 1229, 691)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drw8e"]
+atlas = ExtResource("2_3d63p")
+region = Rect2(0, 0, 747, 420)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6g1rn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3d63p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_slwn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2se3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jk05t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y7w7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1q67t")
+}],
+"loop": true,
+"name": &"chase",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gix8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nx7vr")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drw8e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3d63p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_slwn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2se3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jk05t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y7w7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1q67t")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0p60d"]
+radius = 40.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0p60d"]
+size = Vector2(400, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drw8e"]
+size = Vector2(100, 100)
+
+[node name="cogumelitos" type="CharacterBody2D" unique_id=663742539]
+script = ExtResource("1_sojgr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1761913090]
+sprite_frames = SubResource("SpriteFrames_6g1rn")
+animation = &"dead"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1533350233]
+position = Vector2(-20, 6)
+shape = SubResource("CircleShape2D_0p60d")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1646931844]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=927816400]
+position = Vector2(-20, 6)
+shape = SubResource("RectangleShape2D_0p60d")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1672619563]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1789445981]
+position = Vector2(-20, 6)
+shape = SubResource("RectangleShape2D_drw8e")
+
+[node name="DamageCooldown" type="Timer" parent="." unique_id=2117155044]
+wait_time = 0.5
+one_shot = true
